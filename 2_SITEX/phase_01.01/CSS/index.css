@@ -1,0 +1,83 @@
+:root {
+    --main-bg-color: #181A12;
+}
+
+/* Navigation */
+.menu {
+   /* background: #181A12;*/
+    background: var(--main-bg-color);
+}
+.menu a {
+    color: #FF6533;
+    border: 0.1em solid var(--main-bg-color);
+    padding:0.25em 0.5em;
+    margin:0.5em;
+}
+.menu a:hover, .menu a:focus {
+    background: #282828;
+    border: 0.1em solid #808080;
+    border-radius: 0.75em 0.25em;
+}
+.menu a:focus {
+    background: #282828;
+    border: 0.1em solid rgba(64, 64, 64, .2);
+    border-radius: 0.5em;
+    box-shadow: 0.2em 0.2em #888888;
+}
+:focus{
+    /* tese lines of codes are mandatory for disable the outline blue colored border */
+    outline: unset;
+    outline-color: #181a12;
+    outline-style: hidden;
+    outline-width: 0;
+}
+.selected{
+    background: #282828;
+    border: 0.1em solid rgba(64, 64, 64, .2);
+    border-radius: 0.5em;
+    box-shadow: 0.2em 0.2em #888888;
+}
+
+/* Menu de sous-menu */
+#sous-menu {
+    width: 18%;
+    float: left; /* -> 2 */
+}
+.menu ul {
+    margin: 0;
+    padding: 20px 10px;
+    list-style: none;
+}
+#menu ul {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    overflow: hidden;
+}
+.menu a {
+    display: block;
+    /*height: 2em; /* -> 3 */
+    padding: 0.5em;
+    line-height: 1.5;
+    font-size: .9em;
+    text-decoration: none;
+}
+#sous-menu a{    /* la hauteur de ligne de ces liens sera de 2 dans le sous-menu et de 2.5 dans le menu --- Pa00.g.2 */
+    height: 2%;
+}
+#menu a{
+    height: 2.5%;
+}
+/*pour faire horizontal les #menu*/
+#menu li {
+    float: left;
+}
+/* Show the tooltip text when you mouse over the tooltip container
+#auteur:hover #tooltiptext {
+    visibility: visible;
+}*/
+/* Credits */
+#credits {
+    display: block;
+}
+

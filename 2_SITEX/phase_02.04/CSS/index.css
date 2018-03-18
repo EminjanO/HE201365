@@ -1,0 +1,150 @@
+:root {
+    --main-bg-color: #181A12;
+}
+
+/* Navigation */
+.menu {
+   /* background: #181A12;*/
+    background: var(--main-bg-color);
+}
+.menu a {
+    color: #FF6533;
+    border: 0.1em solid var(--main-bg-color);
+    padding:0.25em 0.5em;
+    margin:0.5em;
+}
+.menu a:hover, .menu a:focus {
+    background: #282828;
+    border: 0.1em solid #808080;
+    border-radius: 0.75em 0.25em;
+}
+.menu a:focus {
+    background: #282828;
+    border: 0.1em solid rgba(64, 64, 64, .2);
+    border-radius: 0.5em;
+    box-shadow: 0.2em 0.2em #888888;
+}
+:focus{
+    /* tese lines of codes are mandatory for disable the outline blue colored border */
+    outline: unset;
+    outline-color: #181a12;
+    outline-style: hidden;
+    outline-width: 0;
+}
+.selected{
+    background: #282828;
+    border: 0.1em solid rgba(64, 64, 64, .2);
+    border-radius: 0.5em;
+    box-shadow: 0.2em 0.2em #888888;
+}
+
+/* Menu de sous-menu */
+#sous-menu {
+    width: 18%;
+    float: left; /* -> 2 */
+}
+.menu ul {
+    margin: 0;
+    padding: 20px 10px;
+    list-style: none;
+}
+#menu ul {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    overflow: hidden;
+}
+.menu a {
+    display: block;
+    /*height: 2em; /* -> 3 */
+    padding: 0.5em;
+    line-height: 1.5;
+    font-size: .9em;
+    text-decoration: none;
+}
+#sous-menu a{    /* la hauteur de ligne de ces liens sera de 2 dans le sous-menu et de 2.5 dans le menu --- Pa00.g.2 */
+    height: 2%;
+}
+#menu a{
+    height: 2.5%;
+}
+/*pour faire horizontal les #menu*/
+#menu li {
+    float: left;
+}
+/* Show the tooltip text when you mouse over the tooltip container
+#auteur:hover #tooltiptext {
+    visibility: visible;
+}*/
+/* Credits */
+#credits {
+    display: block;
+}
+/*section #gestion after div #global*/
+#gestion{
+    clear: both;
+}
+section#gestion>aside{
+    width: 80%;
+    /*text-align: center;*/
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 0.5em;
+    border:solid 1px #888888 ;
+    background-color: rgba(255, 255, 255, 0.33);
+    padding: 0.5em;
+}
+section#gestion aside:before{
+    background-color: darkgrey;
+    border-color:grey;
+}
+#gestion aside#error:before{
+    content: "error";
+    position: relative;
+    top: -1em;
+    padding: 3px 1em 3px 1em;
+    border: solid 1px;
+    border-radius: 0.5em;
+    background-color: darkred;
+    border-color: orange;
+}
+#gestion aside#message:before{
+    content: "message";
+    position: relative;
+    top: -1em;
+    padding: 3px 1em 3px 1em;
+    border: solid 1px;
+    border-radius: 0.5em;
+    background-color: darkgreen;
+    border-color: green;
+}
+#gestion aside#debug:before{
+    content: "debug";
+    position: relative;
+    top: -1em;
+    padding: 3px 1em 3px 1em;
+    border: solid 1px;
+    border-radius: 0.5em;
+    background-color: firebrick;
+    border-color: orange;
+}
+#gestion aside#jsonError:before{
+     content: "jsonError";
+    position: relative;
+    top: -1em;
+    padding: 3px 1em 3px 1em;
+    border: solid 1px;
+    border-radius: 0.5em;
+     background-color: rebeccapurple;
+     border-color: purple;
+ }
+#gestion aside#kint:before{
+    content: "kint";
+    position: relative;
+    top: -1em;
+    padding: 3px 1em 3px 1em;
+    border: solid 1px;
+    border-radius: 0.5em;
+    background-color: darkblue;
+    border-color: blue;
+}

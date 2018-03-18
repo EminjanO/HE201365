@@ -1,0 +1,53 @@
+/* Navigation */
+.menu {
+    background: #181A12;
+}
+.menu a {
+    color: #FF6533;
+}
+.menu a:hover, .menu a:focus {
+    background: #000000;
+}
+/* Menu de sous-menu */
+#sous-menu {
+    width: 18%;
+    float: left; /* -> 2 */
+}
+.menu ul {
+    margin: 0;
+    padding: 20px 10px;
+    list-style: none;
+}
+#menu ul {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    overflow: hidden;
+}
+.menu a {
+    display: block;
+    /*height: 2em; /* -> 3 */
+    padding: 0.5em;
+    line-height: 1.5;
+    font-size: .9em;
+    text-decoration: none;
+}
+#sous-menu a{    /* la hauteur de ligne de ces liens sera de 2 dans le sous-menu et de 2.5 dans le menu --- Pa00.g.2 */
+    height: 2%;
+}
+#menu a{
+    height: 2.5%;
+}
+/*pour faire horizontal les #menu*/
+#menu li {
+    float: left;
+}
+/* Show the tooltip text when you mouse over the tooltip container
+#auteur:hover #tooltiptext {
+    visibility: visible;
+}*/
+/* Credits */
+#credits {
+    display: block;
+}
+

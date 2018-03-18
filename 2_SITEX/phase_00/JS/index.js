@@ -1,3 +1,11 @@
+
+function appelAjax() {
+    $.get('/TP/2T/RES/appelHTML.php?rq=config',function(retour){
+        $('#contenu').html(retour);
+    })
+}
+// je suis au point 3 de point 6 :-)
+
 $('document').ready(function() {
     $('#credits a').prop('target', '_blank');   // 5.3 a partir de ready(), modifiez les lizns du span credits, pour qu'ils
                                                 // s'ouvrent dans une nouvelle page ( un nouvel onglet )
