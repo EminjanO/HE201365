@@ -15,6 +15,8 @@ function display($txt){
 }
 function gereRequete($rq)
 {
+    require_once '/RES/appelAjax.php'; // 05 1.2.5
+
     global $toSend;
     switch ($rq){
         case 'sem03': display("Requête \" $rq \" : Le TP03 est disponible sur le serveur !");
@@ -23,7 +25,10 @@ function gereRequete($rq)
             break;
         case 'TPsem05':
             $res = chargeTemplate($rq); //tpSem05 1.2.4 uses teSend() instead of display() / error()
-            if($res) toSend($res,'formTP05');
+            if($res) {
+                toSend($res,'formTP05');
+                toSend(RES_appelAjax('allGroups'),'data'); // 05 1.2.5
+            }
             else toSend("template non trouvé : $rq","error");
             break;
         default:

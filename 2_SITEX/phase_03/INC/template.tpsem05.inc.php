@@ -24,11 +24,10 @@
     <fieldset id="tp05select">
         <legend id="bLegend">Suggestion</legend>
         <form name="suges" title="choisissez le groupe à afficher" id="selec" onsubmit="return false">
-            <legend>Suggestion <span id="nb"></span></legend>
-            <form id="suges">
+            <span id="blocOption">
                 <select name="formSelect" id="select" size=10 title="choisissez le groupe à afficher">
                 </select>
-            </form>
+            </span>
         </form>
     </fieldset>
     <fieldset id="tp05result">

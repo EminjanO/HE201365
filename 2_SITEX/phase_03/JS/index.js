@@ -1,3 +1,6 @@
+// sem 05 1.2.5
+var myData = [];
+
 // phase00.08.1
 function appelAjax(aValue, event) {
     event.preventDefault();
@@ -22,6 +25,8 @@ function gereRetour(retour) {
                 break;
             case "formTP05":
                 $('#contenu').html(retour[action]);
+                myData['allGroups'] = JSON.parse( retour['data']);
+                // $('#debug').html(makeTable(JSON.parse( retour['data']))).fadeIn(500);
                 break;
             case "makeTable":
                 var table=[];
@@ -29,7 +34,7 @@ function gereRetour(retour) {
                 $('#contenu').html(table).show(500);
                 break;
             case "error":
-                $('#' + action ).html(retour[action]).show(500);
+                $('#' + action ).html(retour[action]).fadeIn(500);
                 break;
             case "jsonError":
                 $('#' + action ).html('Error : <br>'+ retour[action].error + '<hr> Json : '+ retour[action].json).show(500);
