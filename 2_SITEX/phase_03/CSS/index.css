@@ -162,3 +162,18 @@ tbody tr:nth-child(odd) {
 tbody tr:nth-child(even) {
     background-color: lightgreen;
 }
+/*tpSem05 1.2.3*/
+fieldset
+{
+    display:inline-flex;
+}
+#tp05search, #tp05result
+{
+    text-align: center;
+    vertical-align: top;
+}
+#tp05select
+{
+    text-align: justify;
+    vertical-align: top;
+}

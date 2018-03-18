@@ -22,9 +22,9 @@ function gereRequete($rq)
         case 'sem04': display("Cette fois je te reconnais ($rq).");
             break;
         case 'TPsem05':
-            $res = chargeTemplate($rq);
-            if($res) display($res);
-            else error("template non trouvé : $rq");
+            $res = chargeTemplate($rq); //tpSem05 1.2.4 uses teSend() instead of display() / error()
+            if($res) toSend($res,'formTP05');
+            else toSend("template non trouvé : $rq","error");
             break;
         default:
             //return "je ne connais pas ce genre de métier ('$rq'), allez voir à voté";
@@ -50,3 +50,10 @@ function error($txt){ //teSem05 1.2.2 créer la fonction error(), homologue à d
     if (!isset($toSend ['error'])) $toSend['eroor'] ='';
     $toSend['error'] .= $txt;
 }
+
+//tpSem05 1.2.4
+ function toSend($txt, $action = 'display'){
+     global $toSend;
+     if (!isset($toSend [$action])) $toSend[$action] ='';
+     $toSend[$action] .= $txt;
+ }

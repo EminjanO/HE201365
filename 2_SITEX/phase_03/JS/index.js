@@ -20,6 +20,9 @@ function gereRetour(retour) {
             case "display":
                 $('#contenu').html(retour[action]);
                 break;
+            case "formTP05":
+                $('#contenu').html(retour[action]);
+                break;
             case "makeTable":
                 var table=[];
                 table = makeTable(retour[action]);

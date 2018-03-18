@@ -26,7 +26,7 @@
         <form name="suges" title="choisissez le groupe à afficher" id="selec" onsubmit="return false">
             <legend>Suggestion <span id="nb"></span></legend>
             <form id="suges">
-                <select name="formSelect" id="select" size=0 title="choisissez le groupe à afficher">
+                <select name="formSelect" id="select" size=10 title="choisissez le groupe à afficher">
                 </select>
             </form>
         </form>
