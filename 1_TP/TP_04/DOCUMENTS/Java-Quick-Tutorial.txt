@@ -1,0 +1,763 @@
+Java Quick Tutorial for Selenium
+--------------------------------------------
+Java Environment Setup & Verify
+
+A) Java Fundamentals
+ i) Comments in Java
+ ii) Java Data Types
+ iii) Java Modifiers
+ iv) Variables
+ v) Operators
+ vi) Conditional Statements
+ vii) Loop Statements
+ viii) String Handling in Java
+ ix) Arrays in Java
+ x) Java IO Operations and File Handling
+ xi) Java Built-in Methods 
+ xii) Java User defined Methods
+ xiii) Java Exception Handling
+ 
+B) Java OOPS (Object Oriented Programming System)
+ i) Inheritance
+ ii) Polymorphism
+ iii) Abstraction
+ iv) Encapsulation
+--------------------------------------------
+Java Environment Setup & Verify
+--------------------------------------------
+Steps:
+> Download Eclipse IDE and extract
+> Download Java and Install
+-------------------------
+> Launch Eclipse IDE
+> Create Java Project
+ > Create Java Package
+  > Create Java Class 
+Write Java Program and Execute
+--------------------------------------------
+i) Comments in Java
+--------------------------------------------
+Purpose of Comments in Computer Programming
+
+ > To make the Code Readable
+ > To make the Code disable from Execution.
+
+Java supports Single line comment and multiple line comments.
+----------------------------------
+Single line Comment- // before the Statement
+
+Multiple lines comment/comment a block of statements
+/* Statements
+---------------
+------------------
+----------*/ 
+----------------------------------
+Example:
+public static void main(String[] args) {
+//It is a Sample Java Program
+int a=10, b =20;
+System.out.println(a+b);
+
+/*if ( a > b){
+System.out.println("A is a Big Number"); 
+}
+else {
+System.out.println("B is a Big Number");
+}*/
+
+}
+}
+--------------------------------------------
+ii) Data Types in Java
+--------------------------------------------
+A Data Type is a classification of the type of data that a variable or object can hold in computer programming.
+
+Example for General Data Types:
+
+Character,
+
+Integer,
+
+String
+
+Float
+
+Boolean etc...
+
+Java supports two categories of Data types.
+
+a) Primitive Data Types
+
+b) Reference Data Types.
+--------------------------------
+Example:
+
+int a=10;
+char b ='A';
+double c = 123.234;
+boolean d = true;
+System.out.println(a);
+System.out.println(b);
+System.out.println(c);
+System.out.println(d);
+--------------------------------------------
+iii) Java Modifiers
+--------------------------------------------
+Modifiers are used to set access levels for Classes, Variables and Methods etc...
+
+Two types of Modifiers in Java
+
+1) Access Modifiers (default, public, private and protected)
+
+2) Non Access Modifiers (static, final, abstract, synchronized etc...)
+-------------------------------
+Example:
+public class Class1 {
+public int a =10, b =20;
+public void add(){
+int result = a +b;
+System.out.println(result);
+}
+public static void main(String[] args) {
+Class1 obj = new Class1();
+obj.add();
+}
+}
+--------------------------------------------
+iv) Variables in Java
+--------------------------------------------
+A named memory location to store temporary data within a program.
+
+Three types of variables in Java
+
+1) Local Variables
+
+2) Instance Variables
+
+3) Class / Static Variables
+----------------------------
+Example:
+
+public class Class1 {
+public static int a =100, b =20;
+
+public static void main(String[] args) {
+int c = 30;
+System.out.println(a);
+System.out.println(c);
+
+if (a > b){
+int d=40;
+System.out.println(a + b + d);
+System.out.println(d);
+}
+//System.out.println(d);
+System.out.println(b);
+}
+}
+--------------------------------------------
+v) Operators in Java
+--------------------------------------------
+Operators are used to perform Mathematical, Comparison and Logical Operations.
+
+Categories of Operators in Java
+
+1) Arithmetic Operators
+
+2) Relational Operators
+
+3) Assignment Operators
+
+4) Logical Operators
+Etc...
+-----------------------
+1) Arithmetic Operators
+
+a) Addition + (Addition, String Concatenation)
+
+b) Subtraction - (Subtraction, Negation)
+
+c) Multiplication *
+
+d) Division /
+
+e) Modules % 
+
+f) Increment ++
+
+g) Decrement --
+-----------------------
+2) Relational Operators
+
+a) == 
+
+b) !=
+
+c) >
+
+d) >=
+
+e) <
+
+f) <=
+-----------------------
+3) Assignment Operators
+
+a) Assignment  =
+
+b) Add and Assign +=
+
+c) Subtract and Assign -=
+
+d) Multiply and Assign *=
+--------------------
+4) Logical Operators
+
+a) Logical Not operator !
+
+b) Logical And Operator &&
+
+c) Logical Or operator ||
+--------
+Example:
+
+public class Class1 {
+public static void main(String[] args) {
+int a=10, b=20, c =30;
+
+System.out.println(a+b);
+System.out.println(a*b);
+System.out.println(a-b);
+
+System.out.println(a > b);
+System.out.println(a < b);
+
+System.out.println(a+10);
+
+if ((c > a) && (c > b)){
+System.out.println("C is a Big Number");
+}
+else {
+System.out.println("C is Not a Big Number"); 
+}
+
+}
+}
+--------------------------------------------
+vi) Java Conditional Statements
+--------------------------------------------
+1) Two types of statements
+
+a) if statement
+
+b) switch statement
+-----------------------
+2) Three types of Conditions
+
+a) Single Condition (Positive/Negative)
+
+b) Compound Condition (Positive/Negative)
+
+c) Nested Condition (Positive/Negative)
+---------------------------------------
+3) Usage of Conditional Statements
+
+a) Execute a block of statements when a condition is true.
+
+b) Execute a block of statements when a condition is true, otherwise execute another block of statements.
+
+c) Execute a block of statements when a Compound condition is true, otherwise execute another block of statements.
+
+d) Decide among several alternates (Else if)
+
+e) Execute a block of statements when more than one condition is true (Nested if).
+
+f) Decide among several alternates using Switch statement
+----------------------------------------------------
+Example:
+
+int a=100, b=20;
+
+if (a > b){
+System.out.println("A is a Big Number"); 
+}
+
+if (a > b){
+System.out.println("A is a Big Number"); 
+}
+else {
+System.out.println("B is a Big Number");
+}
+
+if (!(b > a)){
+System.out.println("A is a Big Number"); 
+}
+else
+{
+System.out.println("B is a Big Number"); 
+}
+--------------------------------------------
+vii) Loop Statements
+--------------------------------------------
+Used for Repetitive execution.
+
+Four types of loop structures in Java
+
+1) for loop
+
+2) while loop
+
+3) do while loop
+
+4) Enhanced for loop(Arrays)
+-----------------------------------------
+Examples:
+
+//Print 1 to 10 Numbers
+for (int i=1; i<=10; i++){
+System.out.println(i); 
+}
+--------------------
+//Print 1 to 10 Numbers
+int i=1;
+while (i<=10){
+System.out.println(i);
+i++;
+}
+----------------------------
+//Print 1 to 5 Numbers Except 4
+for (int i = 1; i <=5; i++){
+if (i != 4){
+System.out.println(i);
+}
+}
+--------------------------------------------
+viii) String handling in Java
+--------------------------------------------
+> Sequence of characters written ""
+
+> String may contain Alfa bytes or Alfa-numeric or Alfa-numeric and Special characters or only numeric.
+
+
+"ABCD"
+"India123"
+"India123$#@"
+"123"
+---------------------------------
+Example:
+System.out.println("India");
+System.out.println("India123");
+System.out.println("123");
+System.out.println("$%^");
+System.out.println("India123%^&*");
+----------------------------------
+Creating Strings
+
+String myTool = "UFT";//String Variable
+String [] myTools ={"UFT", "RFT", "Selenium"};//Array of Strings
+System.out.println(myTool);//UFT
+--------------------------------------
+Example 3:
+
+String str1 ="Selenium";
+String str2 = " UFT";
+System.out.println(str1 + str2);//Selenium UFT
+System.out.println(str1.concat(str2));//Selenium UFT
+System.out.println("Selenium"+1+1);//Selenium11
+System.out.println(1+1+"Selenium");//2Selenium
+--------------------------------------------
+ix) Arrays in Java
+--------------------------------------------
+> Generally, Array is a collection of similar type of elements.
+
+> In Java, Array is an Object that contains elements of similar data type.
+
+> Each item in an Array is called an Element.
+----------------------------
+Example:
+
+int a [];
+a= new int[3];
+a[0]=10;
+a[1]=20;
+a[2]=30;
+System.out.println(a[1] + a[2]);
+--------------------------------------
+int a [] = new int [3];
+a[0]=10;
+a[1]=20;
+a[2]=3;
+System.out.println(a[0] - a[2]);
+--------------------------------------
+int a [] = {10, 20, 30, 40};
+System.out.println(a[1] + a[3]);
+--------------------------------------------
+//Different Types of Arrays
+
+char [] a = {'A', 'B', 'C', 'd'};//Array of Characters
+int [] b ={10, 20, 30, 40}; //Array of Integers
+String [] c = {"UFT", "RFT", "Selenium"};//Array of Strings
+boolean [] d ={true, false, false, true}; //Array of Boolean values.
+double [] e ={1.234, 2.345, 5.6}; // Array of decimal point values
+--------------------------------------------
+x) Java IO Operations
+--------------------------------------------
+Reading Data (Read Input, Read data from files)
+-----------------------------
+Using java.util.Scanner is the easier way and it includes many methods to check input is valid to read.
+
+Examples:
+
+1) Read Input:
+
+Scanner scan = new Scanner(System.in); //System.in is an Input stream
+System.out.println("Enter Your Name");
+String name = scan.nextLine();
+System.out.println("Your Name is "+ name);
+
+System.out.println("Enter Your Number");
+int num = scan.nextInt();
+System.out.println("Your Number is "+ num);
+---------------------------
+2) Display Output on the Console
+
+public static void main(String[] args) {
+int a =10, b=20;
+System.out.println(a);//10
+System.out.println("welcome to Selenium");//welcome to Selenium
+System.out.println("Addition of a, b is "+ (a+b));//Addition of a, b is 30
+System.out.println("value of a is "+ a + " Value of b is "+b);//Value of a is 10 value of b is 20"
+}
+--------------------------------------------
+xi) File Handling
+--------------------------------------------
+Using File Class we can handle Computer files.
+
+Example:
+
+1) Create a Folder
+
+File fileObject = new File("C:/Users/gcreddy/Desktop/ABC"); 
+fileObject.mkdir();
+--------------------------------------------
+xii) Java Methods 
+--------------------------------------------
+A Java Method is a set of statements that are grouped together to perform an operation.
+
+Methods are also known as Functions.
+
+In structured programming (Ex: C Language) we use Functions (Built-in and User defined)
+
+In Object Oriented Programming (Ex: Java Language) we use Methods (Built-in and User defined)
+-------------------------------------------
+When we choose Methods?
+
+Whenever we want perform any operation multiple times then we choose methods.
+
+Advantages of Methods
+
+Code Reusability, using methods we can reduce the project code size.
+
+Code Maintenance is easy.
+--------------------------------------------
+ii) Types Methods in Java
+--------------------------------------------
+Two types of Methods
+
+1) Built in /Pre-defined Methods
+
+2) User defined Methods
+--------------------------------------
+equals() Method
+
+Compares two strings and supports 2-way comparison
+
+Example:
+
+public static void main(String[] args) {
+String str1 = "selenium";
+String str2 ="SELENIUM";
+String str3 ="seleniuma";
+String str4 = "selenium";
+
+System.out.println(str1.equals(str2));//false
+System.out.println(str1.equals(str4));//true
+----------------------------------
+round()
+Rounds the value to nearest integer.
+
+public static void main(String[] args) {
+double a =10.234;
+double b =-10.784;
+
+System.out.println(Math.round(a));//10
+System.out.println(Math.round(b));//-11
+}
+---------------------------------------
+isAlphabetic()
+
+Checks weather the value is alfa byte or not?
+
+public static void main(String[] args) {
+char a ='Z';
+char b ='1';
+
+System.out.println(Character.isAlphabetic(a));//true
+System.out.println(Character.isAlphabetic(b));//false
+System.out.println(Character.isAlphabetic('B'));//true
+System.out.println(Character.isAlphabetic('a'));//true
+System.out.println(Character.isAlphabetic('*'));//false
+--------------------------------------------
+xiii) User Defined methods in Java
+--------------------------------------------
+Two types of user defined methods
+
+1) Method without returning any value
+ a) Calling Methods by invoking Object
+ b) Calling methods without invoking Object
+
+2) Method with returning a Value
+ a) Calling Methods by invoking Object
+ b) Calling methods without invoking Object
+---------------------------------------------
+ Calling External Methods
+----------------------------------------------
+Examples:
+
+//User defined methods
+public int multiply(int a, int b, int c){
+int result = a*b*c;
+return result;
+}
+public static void main(String[] args) {
+//Create Object
+JavaMethods abc = new JavaMethods();
+ 
+//Call methods
+int x = abc.multiply(10, 25, 35);
+System.out.println(x);
+---------------------------------
+//Create a method without returning any value
+public static void studentRank(int marks){
+if (marks >= 600){
+System.out.println("Rank A");
+}
+else if (marks >=500){
+System.out.println("Rank B"); 
+}
+else{
+System.out.println("Rank C");
+}
+}
+ 
+public static void main(String[] args) {
+//Call Methods
+JavaMethods.studentRank(650);
+}
+--------------------------------------------
+xiv) Java Exception Handling
+--------------------------------------------
+> An Exception is an event that occurs during execution of a program when normal execution of a program
+    is interrupted.
+
+> Exception handling is a mechanism to handle exceptions.
+
+Common Scenarios where exceptions may occur
+
+1) Scenario where ArithemeticException occurs
+
+2) Scenario where NullPointerException occurs.
+
+3) Scenario where NumberFormatException occurs
+
+4) Scenario where ArrayIndexOutofBounds exception occurs
+
+Example:
+
+public static void main(String[] args) {
+int a =10;
+int b =0;
+int result = a/b;
+System.out.println(result);
+System.out.println("Hello Java");
+System.out.println("Hello Selenium");
+}
+--------------------------------------------
+B) Java OOPS
+--------------------------------------------
+Four fundamentals of OOPS:
+
+i) Inheritance
+
+ii) Polymorphism
+
+iii) Abstraction
+
+iv) Encapsulation
+--------------------------------------------
+i) Inheritance
+--------------------------------------------
+> It is a process of Inheriting (reusing) the class members (Variables and Methods) from one class to another.
+
+> Non static class members only can be inherited.
+
+> The Class where the class members are getting inherited is called as Super Class/parent Class/Base Class.
+
+> The Class to which the class members are getting inherited is called as Sub Class/Child Class/Derived Class.
+
+> The Inheritance between Super class and Sub class is achieved using "extends" keyword.
+----------------------------
+Example
+----------------------------
+Class 1:
+
+public class ClassA {
+int a =10;
+int b =20;
+
+public void add(){
+System.out.println(a+b);
+}
+public static void main(String[] args) {
+ClassA objA = new ClassA();
+System.out.println(objA.a);//10
+objA.add();//30
+}
+}
+------------------------------
+Class 2:
+
+public class ClassB extends ClassA{
+int a =100;
+int b =200;
+
+public void add(){
+System.out.println(a+b);
+}
+public static void main(String[] args) {
+ClassB objB = new ClassB();
+System.out.println(objB.a);//100
+objB.add();//300
+}
+}
+--------------------------------------------
+ii) Polymorphism
+--------------------------------------------
+Existence of Object behavior in many forms
+
+There two types of Polymorphism
+
+1) Compile Time Polymorphism / Method Overloading
+
+2) Run Time Polymorphism / Method Overriding
+--------------------------------------------
+1) Compile Time Polymorphism / Method Overloading
+
+If two or more methods with same name in the same class but they differ in following ways.
+
+a) Number of Arguments
+
+b) Type of Arguments
+------------------------------------
+Example:
+------------------------------------
+public class Class1 {
+public void add(int a, int b){
+System.out.println(a+b); 
+}
+
+public void add(int a, int b, int c){
+System.out.println(a+b+c); 
+}
+
+public void add(double a, double b){
+System.out.println(a+b); 
+}
+
+public static void main(String[] args) {
+Class1 obj = new Class1();
+obj.add(1.23, 2.34);
+obj.add(10,  20);
+obj.add(1,  5, 9);
+}
+}
+--------------------------------------------
+iii) Abstraction
+--------------------------------------------
+> It is a process of hiding implementation details and showing only functionality to the user.
+
+Two types of Methods in Java
+
+1) Concrete Methods (The methods which are having body)
+
+2) Abstract Methods (The methods which are not having body)
+
+> If we know the method name but don't know the method functionality then we go for Abstract methods.
+
+> Java Class contains 100% concrete methods.
+
+> Abstract class contains one or more abstract methods.
+----------------------------------------------
+Example for Abstract Class:
+
+public abstract class Bikes {
+ 
+public void handle(){
+System.out.println("Bikes have handle");
+}
+public void seat(){
+System.out.println("Bikes have Seats");
+}
+
+public abstract void engine();
+
+public abstract void wheels();
+
+public static void main(String[] args) {
+//Bikes obj = new Bikes();
+
+}
+}
+--------------------------------------------
+iv) iv) Encapsulation
+--------------------------------------------
+It is a process of wrapping code and data into a single unit.
+
+Ex: Capsule (mixer of several medicines)
+
+Encapsulation is the technique making the fields in a class private and providing access via public methods.
+
+> It provides control over the data
+
+> By providing setter and getter methods we can make a class read only or write only.
+-------------------------------------
+Example:
+
+Class 1:
+
+public class Class1 {
+private String name ="Test Automation";
+
+public String getName(){
+return name; 
+}
+public void setName(String newName){
+name = newName;
+}
+public static void main(String[] args) {
+Class1 obj = new Class1();
+System.out.println(obj.getName());
+}
+}
+-----------------------------------------------
+Class 2:
+
+public class Class2 extends Class1{
+
+public static void main(String[] args) {
+Class2 abc = new Class2();
+//abc.setName("Selenium Testing");
+System.out.println(abc.getName());
+}
+}
+--------------------------------------------

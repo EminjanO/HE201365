@@ -21,7 +21,10 @@ function gereRequete($rq)
             break;
         case 'sem04': display("Cette fois je te reconnais ($rq).");
             break;
-        case 'TPsem05': display("display:Requête << $rq >> bien reçue .");
+        case 'TPsem05':
+            $res = chargeTemplate($rq);
+            if($res) display($res);
+            else error("template non trouvé : $rq");
             break;
         default:
             //return "je ne connais pas ce genre de métier ('$rq'), allez voir à voté";
@@ -30,3 +33,20 @@ function gereRequete($rq)
     }
 }
 //echo gereRequete('yolo');
+
+function chargeTemplate($name = "yololo"){ //tpSem05 1.2.2
+    //mettre le paramètre en minuscule
+    $name = 'INC/template.'.strtolower($name).'.inc.php';
+    //tester l'existance du fichier template.___.inc.php où___ est le name reçu
+    // s'il n'existe pas, elle retourne false
+    // sinon :
+        // elle charge (Cfr. Cours : chargement de fichiers) dans un tableau les lignes de ce fichier
+        // Retourne le réassemblage de se tableau en une seule chaine avec des \n comme colle
+    return file_exists($name)? implode("\n",file($name)) : false;
+}
+
+function error($txt){ //teSem05 1.2.2 créer la fonction error(), homologue à display(), qui générera l'affichage d'une erreur (dans l'aside#error) du coté client
+    global $toSend;
+    if (!isset($toSend ['error'])) $toSend['eroor'] ='';
+    $toSend['error'] .= $txt;
+}
