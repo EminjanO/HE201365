@@ -21,7 +21,7 @@ $tableau = [
     'bo257' =>['auteur'=> 'D.Y.',  'titre'=> 'Programmation Multimedia', 'prix'=> 6.00]
 ];
 
-/*function scriptInfos($p='' ){
+function scriptInfos($p='' ){
     $calFuncLine = __LINE__-1;
     static $count=0;
     if($count==0)
@@ -85,7 +85,7 @@ $tableau = [
     else{
         echo 'Error in '. $calFuncLine .' : '. 'parametre inconnu : ' . $p;
     }
-}*/
+}
 
 function creeTableau($liste, $titre='', $index = false)
 {

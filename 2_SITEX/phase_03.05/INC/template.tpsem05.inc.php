@@ -23,7 +23,7 @@
     </fieldset>
     <fieldset id="tp05select">
         <legend id="bLegend">Suggestion</legend>
-        <form name="suges" title="choisissez le groupe à afficher" id="selec" onsubmit="return false">
+        <form name="suges" action="formSubmit.html" title="choisissez le groupe à afficher" id="selec" onsubmit="return false">
             <span id="blocOption">
                 <select name="formSelect" id="select" size="10" title="choisissez le groupe à afficher">
                 </select>
@@ -32,10 +32,10 @@
     </fieldset>
     <fieldset id="tp05result">
         <legend>Liste des cours</legend>
-            <p>
+            <p id="nonSuggession">
                 Pas de groupe sélectionné
             </p>
-            <div></div>
+            <div id="listCours"></div>
     </fieldset>
 </section>
 <?php

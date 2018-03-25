@@ -2,21 +2,45 @@
 var myData = [];
 
 // phase00.08.1
-function appelAjax(aValue, event) {
-    event.preventDefault();
-    /*    console.log(aValue.attributes.href.value.split(".")[0]);
-        console.log(event.isDefaultPrevented() );
-        console.log(aValue);  // pas là mais directement dant l'event clic*/
-    var request = $(aValue).attr("href").split(".")[0];
-    $.get('./index.php?rq=' + request, gereRetour)
+function appelAjax(aValue,senderId) {
+    $.ajaxSetup({processData: false,contentType: false}); // indique à jQuery de ne pas traiter les données
+                                                  // indique à jQuery de ne pas configurer le contentType)
+
+    console.log(arguments.callee.name,aValue);
+    var data= new FormData();   //{};
+    var request = 'unknownUri';
+    switch (true){
+        case Boolean(aValue.href) :
+            request = $(aValue).attr("href").split(".html")[0];
+            break;
+        case Boolean(aValue.action) :
+            request = $(aValue).attr("action").split(".html")[0];
+            data = new FormData(aValue);
+            break;
+    }
+    console.log(aValue.select);
+    data.append('senderId',senderId);  //data.senderId=aValue.id;
+    $.post('?rq='+request,data,gereRetour);
+    console.log(data);
 }
+/* pour  sem05 1.4.3
+jQuery.post( url, [ data ], [ success
+(data, textStatus, XMLHttpRequest) ],
+[ dataType ] )*/
 
 function gereRetour(retour) {
     retour = testJson(retour);
     /*$('#contenu').html(retour);
     var a = 'makeTable';
     console.log(retour[a])*/
-    for (var action in retour)
+    let distination = '#contenu';               // 1.6.5 of sem05 below 3 lines
+    // j'ai pas bien compris ici aussi mais j'ai fait, pourquoi on fait ça ? c'est quoi l'intéré ?
+    if(typeof retour['distination']){           //si destination existe
+        distination = retour['destination'];    // prise en compte
+        console.log(retour['destination'])
+        delete (retour['destination']);         // suppression de la liste
+    }
+    for (let action in retour)
     {
         switch (action)
         {
@@ -26,28 +50,41 @@ function gereRetour(retour) {
             case "formTP05":
                 $('#contenu').html(retour[action]);
                 myData['allGroups'] = JSON.parse( retour['data']);
+                // console.log( retour['data']);
                 //$('#debug').html(makeOptions(myData['allGroups'],'nom','nom')).fadeIn(500);
                 $('#select').html(makeOptions(myData['allGroups'],'nom','nom'));
                 console.log($('#select option').length);
+                $('#selec').change(function () {  //c'est la référence du formulaire qui doit être passé à la fonction. Pas celle du select !
+                    //$('#debug').html(appelAjax(this, "formTP05")).fadeIn();
+                    appelAjax(this, "formTP05");
+                    console.log(this.parentElement);
+                })
                 if(myData['allGroups'].length<10)
                 {
                     $('#select').attr('size',myData['allGroups'].length);
                     console.log($('#select').attr('size'));
-                    //document.getElementById("selec").size= '"'+myData['allGroups'].length+ '"';
                 }
                 if(myData['allGroups'].length>10)
                 {
                     $('#select').css('overflowY', 'scroll');
                     console.log($('#select').attr('size'));
-                    /*document.getElementById("selec").size = "10";
-                    document.getElementById("selec").style.overflowY="scroll";*/
                 }
                 break;
+            case 'cacher ': //$(retour['cacher']).fadeOut(500);
+                console.log(retour[action]);
+                break;
+            case 'montrer':$(montrer).fadeIn(500);break;
             case "makeTable":
                 var table=[];
                 table = makeTable(retour[action]);
-                $('#contenu').html(table).show(500);
+                // let distination = (retour['destination'] ? retour['destination'] : '#contenu'); // 1.6.4 of sem05
+                $(distination).html(table).show(500);
+                $(retou).fadeOut();
+                console.log(distination);
                 break;
+            case "debug":   // 05 1.4.1
+                    $('#' + action ).html(retour[action]).fadeIn(500);
+                    break;
             case "error":
                 $('#' + action ).html(retour[action]).fadeIn(500);
                 break;
@@ -164,7 +201,7 @@ $('document').ready(function () {
         event.preventDefault();
         $('.menu a').removeClass('selected');
         $(this).addClass('selected');
-        appelAjax(this, event);
+        appelAjax(this, this.id);
 
     });
     $("ul li:first a")/*.focus(); // <-ph01.01>

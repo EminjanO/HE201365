@@ -163,10 +163,12 @@ tbody tr:nth-child(odd) {
 tbody tr:nth-child(even) {
     background-color: lightgreen;
 }
-/*tpSem05 1.2.3*/
-fieldset
+/*tpSem05 1.2.3
+#tpsem05
 {
-    display:inline-flex;
+    display: flex;
+    flex-direction: row;
+    flex-flow: row wrap;
 }
 #tp05search, #tp05result
 {
@@ -193,13 +195,64 @@ fieldset
     margin-bottom: -3px;
     padding-right: -20px;
     overflow:hidden;
-    /*height: 1.5em;*/
-    width: 5.5em;
+    /height: 1.5em;
+    width: 5.5em;/
     -webkit-appearance : none;
     -moz-appearance    : none;
-    appearance         : none;
+    apparance         : none;
 }
 #select option
 {
     width: 5em;
+}
+*/
+#tpsem05 {
+    display: inline-flex;
+}
+
+#formSearch {
+    text-align: center;
+}
+
+#formSearch label {
+    margin: 0;
+    font-size: 1.5em;
+}
+
+#zSearch {
+    height: 2em;
+    width: 12em;
+    font-size: 1.25em;
+}
+
+#zSearch.DERRIERE {
+    text-align: right;
+}
+
+#zSearch.DANS {
+    text-align: center;
+}
+
+#zSearch.DEVANT {
+    text-align: left;
+}
+
+#formSearch span {
+    margin: 0.25em;
+    padding: 0.25em;
+    box-shadow: 0.05em 0.05em darkgrey;
+    -webkit-border-radius: 1em;
+    -moz-border-radius: 1em;
+    border-radius: 1em;
+    background-color: rgba(255, 255, 255, 0.67);
+}
+
+#select {
+    width: 10em;
+    overflow-y: scroll;
+
+}
+
+#select option.deja::before {
+    content:'\21AA \00a0';
 }

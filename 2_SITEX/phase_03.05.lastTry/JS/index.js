@@ -2,57 +2,95 @@
 var myData = [];
 
 // phase00.08.1
-function appelAjax(aValue, event) {
-    event.preventDefault();
-    /*    console.log(aValue.attributes.href.value.split(".")[0]);
-        console.log(event.isDefaultPrevented() );
-        console.log(aValue);  // pas là mais directement dant l'event clic*/
-    var request = $(aValue).attr("href").split(".")[0];
-    $.get('./index.php?rq=' + request, gereRetour)
+function appelAjax(aValue/*,senderId*/) {
+    $.ajaxSetup({processData: false,contentType: false}); // indique à jQuery de ne pas traiter les données
+                                                  // indique à jQuery de ne pas configurer le contentType)
+
+    console.log(arguments.callee.name,aValue);
+    var data= new FormData();   //{};
+    var request = 'unknownUri';
+    switch (true){
+        case Boolean(aValue.href) :
+            request = $(aValue).attr("href").split(".html")[0];
+            break;
+        case Boolean(aValue.action) :
+            request = $(aValue).attr("action").split(".html")[0];
+            data = new FormData(aValue);
+            break;
+    }
+    console.log(aValue.select);
+    //data.append('senderId',senderId);  data.senderId=aValue.id;
+    data.append('senderId',aValue.id)
+    $.post('?rq='+request,data,gereRetour);
+    console.log(data);
 }
+/* pour  sem05 1.4.3
+jQuery.post( url, [ data ], [ success
+(data, textStatus, XMLHttpRequest) ],
+[ dataType ] )*/
 
 function gereRetour(retour) {
     retour = testJson(retour);
     /*$('#contenu').html(retour);
     var a = 'makeTable';
     console.log(retour[a])*/
-    for (var action in retour)
+    let distination = '#contenu';               // 1.6.5 of sem05 below 3 lines
+    // j'ai pas bien compris ici aussi mais j'ai fait, pourquoi on fait ça ? c'est quoi l'intéré ?
+    if(typeof retour['distination']){           //si destination existe
+        distination = retour['destination'];    // prise en compte
+        console.log(retour['destination'])
+        delete (retour['destination']);         // suppression de la liste
+    }
+    for (let action in retour)
     {
         switch (action)
         {
             case "display":
                 $('#contenu').html(retour[action]);
                 break;
-            case "formTP05":
+            case "debug":
+            case "error":
+                $('#' + action ).html(retour[action]).fadeIn(500);
+                break;
+            case "makeTable":
+                var table= makeTable(retour[action]);
+                // let distination = (retour['destination'] ? retour['destination'] : '#contenu'); // 1.6.4 of sem05
+                $(distination).html(table).show(500);
+                console.log(distination);
+                break;
+            case "jsonError":
+                var html = '<b>Error : </b><br>'
+                    + retour[action].error
+                    + '<hr><b>Json : </b><br>'
+                    + retour[action].json;
+                $('#' + action).html(html).fadeIn(500);
+                break;
+            case 'formTP05':
                 $('#contenu').html(retour[action]);
-                myData['allGroups'] = JSON.parse( retour['data']);
-                //$('#debug').html(makeOptions(myData['allGroups'],'nom','nom')).fadeIn(500);
-                $('#select').html(makeOptions(myData['allGroups'],'nom','nom'));
-                console.log($('#select option').length);
+                $('#select').change(function () {
+                    appelAjax(this.parentElement);
+                });
+                break;
+            case 'data':
+                myData['allGroups'] = JSON.parse(retour[action]);
+                $('#select').html(makeOptions(myData.allGroups, 'nom', 'nom'));
+                //$('#debug').html(makeTable(JSON.parse(retour[action]))).fadeIn(1200);
                 if(myData['allGroups'].length<10)
                 {
                     $('#select').attr('size',myData['allGroups'].length);
                     console.log($('#select').attr('size'));
-                    //document.getElementById("selec").size= '"'+myData['allGroups'].length+ '"';
                 }
                 if(myData['allGroups'].length>10)
                 {
                     $('#select').css('overflowY', 'scroll');
                     console.log($('#select').attr('size'));
-                    /*document.getElementById("selec").size = "10";
-                    document.getElementById("selec").style.overflowY="scroll";*/
                 }
                 break;
-            case "makeTable":
-                var table=[];
-                table = makeTable(retour[action]);
-                $('#contenu').html(table).show(500);
+            case 'cacher':
+                $(retour[action]).fadeOut(500);
                 break;
-            case "error":
-                $('#' + action ).html(retour[action]).fadeIn(500);
-                break;
-            case "jsonError":
-                $('#' + action ).html('Error : <br>'+ retour[action].error + '<hr> Json : '+ retour[action].json).show(500);
+            case 'montrer':
+                $(retour[action]).fadeIn(500);
                 break;
             default:
                 console.log('action inconnue : ' + action +'\n', retour[action] );
@@ -164,7 +202,7 @@ $('document').ready(function () {
         event.preventDefault();
         $('.menu a').removeClass('selected');
         $(this).addClass('selected');
-        appelAjax(this, event);
+        appelAjax(this);
 
     });
     $("ul li:first a")/*.focus(); // <-ph01.01>

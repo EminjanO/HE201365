@@ -26,7 +26,7 @@ try
     $_oh__oh___oh = '';
     $dbh = new PDO ( "mysql:host = ".getServer().';dbName = '.$dbName,
         $__INFOS__['user'],$__INFOS__['pswd']);
-    $sqlT = "call $dbName.mc_parentGroup(?)";
+    $sqlT = "call $dbName.mc_group(?)";
     $sthTestP = $dbh->prepare($sqlT);
     $sthTestP->execute(array($groupe));
 
@@ -41,7 +41,7 @@ try
         $res = $sth->fetchAll(PDO::FETCH_ASSOC);
 
         $_oh__oh___oh .= 'Groupe : '.$groupe.'<br>';
-        $_oh__oh___oh .= 'Nom du parent : '. $infos['nomParent']."<br>";
+        $_oh__oh___oh .= 'Nom du parent : '. $infos['parent_id']."<br>";
 
 
         if(!empty($res)) $_oh__oh___oh .= creeTableau($res,'AVEC Index',1);

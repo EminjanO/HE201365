@@ -21,7 +21,7 @@ $tableau = [
     'bo257' =>['auteur'=> 'D.Y.',  'titre'=> 'Programmation Multimedia', 'prix'=> 6.00]
 ];
 
-/*function scriptInfos($p='' ){
+function scriptInfos($p='' ){
     $calFuncLine = __LINE__-1;
     static $count=0;
     if($count==0)
@@ -85,7 +85,7 @@ $tableau = [
     else{
         echo 'Error in '. $calFuncLine .' : '. 'parametre inconnu : ' . $p;
     }
-}*/
+}
 
 function creeTableau($liste, $titre='', $index = false)
 {
@@ -185,8 +185,7 @@ echo creeTableau($tableau, 'avec index', true);
 
 echo "this is monPrint : <br> ".monPrint_r($tableau);*/
 
-
-function debug($var) {
+function debug_me($var) {
     $debug = debug_backtrace();
     echo '<p>&nbsp;</p><p><a href="#" onclick="$(this).parent().next(\'ol\').slideToggle(); return false;">
 		<strong>' . $debug[0]['file'] . ' </strong> l.'

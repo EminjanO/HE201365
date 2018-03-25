@@ -1,41 +1,39 @@
 <section id="tpsem05">
     <fieldset id="tp05search">
         <legend>Groupe recherché</legend>
-        <form name="recherche" onsubmit="return false">
+        <form action="" name="recherche" id="formSearch" onsubmit="return false">
             <input type="text" name="zoneSearch" title="nom de la groupe" placeholder="nom du groupe recherché"
-                   oninput="filtre_v2(this)" id="zSearch" value=""/> <br>
+                   class="I" oninput="filtre_v2(this)" id="zSearch" value=""/> <br>
             <div>
                 <span title="début(Begin)">
-                    <label for="DEVANT"><<</label>
+                    <label for="DEVANT">&#8676;</label>
                     <input onchange="filtre_v2(this.form.zSearch)" type="radio" name="part" id="DEVANT" value="B">
                 </span>
                 <span title="au milieu(middle)">
-                    <label for="DANS">></label>
+                    <label for="DANS">&#8676;</label>
                     <input onchange="filtre_v2(this.form.zSearch)" type="radio" name="part" id="DANS" value="I" checked>
-                    <label for="DANS"><</label>
+                    <label for="DANS">&#8677;</label>
                 </span>
                 <span title="fin(after)">
                     <input onchange="filtre_v2(this.form.zSearch)" type="radio" name="part" id="DERRIERE" value="E">
-                    <label for="DERRIERE">>></label>
+                    <label for="DERRIERE">&#8677;</label>
                 </span>
             </div>
         </form>
     </fieldset>
     <fieldset id="tp05select">
         <legend id="bLegend">Suggestion</legend>
-        <form name="suges" title="choisissez le groupe à afficher" id="selec" onsubmit="return false">
-            <span id="blocOption">
-                <select name="formSelect" id="select" size="10" title="choisissez le groupe à afficher">
-                </select>
-            </span>
+        <form name="suges" action="formSubmit.html" title="choisissez le groupe à afficher" id="formTP05" onsubmit="return false">
+            <select name="formSelect" id="select" size="10" title="choisissez le groupe à afficher">
+                <option value="">a</option>
+                <option value="" class="deja">b</option>
+            </select>
         </form>
     </fieldset>
     <fieldset id="tp05result">
         <legend>Liste des cours</legend>
-            <p>
-                Pas de groupe sélectionné
-            </p>
-            <div></div>
+        <p>Pas de groupe sélectionné</p>
+        <div></div>
     </fieldset>
 </section>
 <?php
