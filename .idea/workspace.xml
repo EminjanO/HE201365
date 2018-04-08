@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="cc12de71-ba92-4d35-ac55-5f45c94fdf8e" name="Default" comment="first test in my phpstorm &amp;&amp; tested sql file">
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/2_SITEX/phase_03.05.lastTry/INC/request.inc.php" beforeDir="false" afterPath="$PROJECT_DIR$/2_SITEX/phase_03.05.lastTry/INC/request.inc.php" afterDir="false" />
     </list>
@@ -40,8 +39,8 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/2_SITEX/phase_03.05.lastTry/JS/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-170">
-              <caret line="34" column="24" lean-forward="true" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
+            <state relative-caret-position="578">
+              <caret line="34" column="24" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
             </state>
           </provider>
         </entry>
@@ -49,8 +48,8 @@
       <file leaf-file-name="request.inc.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/2_SITEX/phase_03.05.lastTry/INC/request.inc.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="598">
-              <caret line="143" column="127" selection-start-line="143" selection-start-column="127" selection-end-line="143" selection-end-column="127" />
+            <state relative-caret-position="507">
+              <caret line="141" column="48" lean-forward="true" selection-start-line="141" selection-start-column="48" selection-end-line="141" selection-end-column="48" />
               <folding>
                 <element signature="e#334#980#0#PHP" />
                 <element signature="e#981#1674#0#PHP" />
@@ -62,7 +61,7 @@
                 <element signature="e#2700#3252#0#PHP" />
                 <element signature="e#3253#3682#0#PHP" />
                 <element signature="e#3683#3840#0#PHP" />
-                <element signature="e#5137#5535#0#PHP" />
+                <element signature="e#5318#5716#0#PHP" />
               </folding>
             </state>
           </provider>
@@ -72,7 +71,7 @@
         <entry file="file://$PROJECT_DIR$/2_SITEX/phase_03.05.lastTry/INC/mesFonction.inc.php">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="340">
-              <caret line="203" lean-forward="true" selection-start-line="203" selection-end-line="203" />
+              <caret line="203" selection-start-line="203" selection-end-line="203" />
               <folding>
                 <element signature="e#102#1261#0#PHP" />
                 <element signature="n#scriptInfos#0;n#!!top" />
@@ -97,9 +96,7 @@
       </file>
       <file leaf-file-name="layout.html.inc.php" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/2_SITEX/phase_03.05.lastTry/INC/layout.html.inc.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-34" />
-          </provider>
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -232,8 +229,8 @@
     <servers />
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1563" />
-    <option name="y" value="-199" />
+    <option name="x" value="1383" />
+    <option name="y" value="-213" />
     <option name="width" value="1213" />
     <option name="height" value="560" />
   </component>
@@ -282,27 +279,8 @@
             <path>
               <item name="HE201365" type="b2602c69:ProjectViewProjectNode" />
               <item name="HE201365" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="2_SITEX" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="HE201365" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HE201365" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="2_SITEX" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="phase_03.05.lastTry" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="HE201365" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HE201365" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="2_SITEX" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="phase_03.05.lastTry" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="INC" type="2a2b976b:PhpTreeStructureProvider$1" />
-            </path>
-            <path>
-              <item name="HE201365" type="b2602c69:ProjectViewProjectNode" />
-              <item name="HE201365" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="2_SITEX" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="phase_03.05.lastTry" type="2a2b976b:PhpTreeStructureProvider$1" />
-              <item name="JS" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="1_TP" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="TP_05" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
@@ -452,12 +430,13 @@
       <workItem from="1521388744905" duration="185000" />
       <workItem from="1521388993016" duration="77702000" />
       <workItem from="1523103571094" duration="147000" />
-      <workItem from="1523103865027" duration="2956000" />
+      <workItem from="1523103865027" duration="3198000" />
+      <workItem from="1523175894973" duration="1444000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="467948000" />
+    <option name="totallyTimeSpent" value="469634000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -475,24 +454,24 @@
     <layout>
       <window_info anchor="bottom" id="TODO" order="6" weight="0.32945284" />
       <window_info anchor="bottom" id="Event Log" order="8" sideWeight="0.5025" side_tool="true" weight="0.45954692" />
-      <window_info anchor="bottom" id="Database Changes" />
-      <window_info anchor="bottom" id="File Transfer" order="12" sideWeight="0.4975" weight="0.21755725" />
+      <window_info anchor="bottom" id="Database Changes" order="9" />
+      <window_info anchor="bottom" id="File Transfer" order="12" sideWeight="0.4975" visible="true" weight="0.21755725" />
       <window_info anchor="bottom" id="Version Control" order="9" weight="0.32945284" />
       <window_info anchor="bottom" id="Run" order="2" />
-      <window_info anchor="bottom" id="Terminal" order="10" weight="0.73134327" />
+      <window_info anchor="bottom" id="Terminal" order="10" weight="0.4933206" />
       <window_info anchor="right" id="Remote Host" order="3" weight="0.14658849" />
-      <window_info content_ui="combo" id="Project" order="2" visible="true" weight="0.15724947" />
+      <window_info content_ui="combo" id="Project" order="2" visible="true" weight="0.15884861" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="4" weight="0.29211086" />
       <window_info id="Structure" order="0" side_tool="true" weight="0.083333336" />
       <window_info id="Favorites" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.14096186" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3282887" />
       <window_info anchor="bottom" id="Messages" order="11" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Message" order="0" />
     </layout>
@@ -513,6 +492,59 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/2_SITEX/phase_03.05.lastTry/JS/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="578">
+          <caret line="34" column="24" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2_SITEX/phase_03.05.lastTry/INC/mesFonction.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3451">
+          <caret line="203" lean-forward="true" selection-start-line="203" selection-end-line="203" />
+          <folding>
+            <element signature="e#102#1261#0#PHP" />
+            <element signature="n#scriptInfos#0;n#!!top" />
+            <element signature="n#creeTableau#0;n#!!top" />
+            <element signature="n#monPrint_r#0;n#!!top" />
+            <element signature="n#getServer#0;n#!!top" />
+            <element signature="e#5361#6243#0#PHP" />
+            <element signature="n#debug_me#0;n#!!top" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2_SITEX/phase_03.05.lastTry/INC/template.tpsem05.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="26" column="36" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2_SITEX/phase_03.05.lastTry/INC/layout.html.inc.php">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/2_SITEX/phase_03.05.lastTry/INC/request.inc.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2465">
+          <caret line="145" column="18" lean-forward="true" selection-start-line="145" selection-start-column="18" selection-end-line="145" selection-end-column="18" />
+          <folding>
+            <element signature="e#334#980#0#PHP" />
+            <element signature="e#981#1674#0#PHP" />
+            <element signature="e#1728#1866#0#PHP" />
+            <element signature="e#1867#2137#0#PHP" />
+            <element signature="e#2138#2280#0#PHP" />
+            <element signature="e#2281#2449#0#PHP" />
+            <element signature="e#2475#2699#0#PHP" />
+            <element signature="e#2700#3252#0#PHP" />
+            <element signature="e#3253#3682#0#PHP" />
+            <element signature="e#3683#3840#0#PHP" />
+            <element signature="e#5318#5716#0#PHP" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/2_SITEX/phase_02.03/INC/layout.html.inc.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="617">
@@ -562,9 +594,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/2_SITEX/phase_02.04/INC/layout.html.inc.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/2_SITEX/phase_02.01/INC/request.inc.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="336">
@@ -579,9 +608,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/2_SITEX/phase_02.01/index.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/2_SITEX/phase_02.05/JS/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
@@ -595,9 +621,6 @@
           <caret line="27" column="1" lean-forward="true" selection-start-line="27" selection-start-column="1" selection-end-line="27" selection-end-column="1" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2_SITEX/phase_03/CSS/base.css">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/2_SITEX/phase_02.05/INC/request.inc.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -620,18 +643,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/2_SITEX/phase_03/INC/dbConnect.inc.php">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/2_SITEX/phase_03/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
           <caret line="17" column="40" selection-start-line="17" selection-start-column="40" selection-end-line="17" selection-end-column="40" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/1_TP/TP_03/sem03p01b.php">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/2_SITEX/phase_03/INC/mesFonction.inc.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -674,9 +691,6 @@
           <caret line="199" column="29" lean-forward="true" selection-start-line="199" selection-start-column="29" selection-end-line="199" selection-end-column="29" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2_SITEX/phase_03.01/INC/dbConnect.inc.php">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/2_SITEX/phase_03.01/INC/mesFonction.inc.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -731,9 +745,6 @@
           <caret line="171" column="1" lean-forward="true" selection-start-line="171" selection-start-column="1" selection-end-line="171" selection-end-column="1" />
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2_SITEX/phase_03.05/index.php">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/2_SITEX/phase_03.01/INC/request.inc.php">
       <provider selected="true" editor-type-id="text-editor">
@@ -800,17 +811,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/2_SITEX/phase_03.05.lastTry/JS/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-170">
-          <caret line="34" column="24" lean-forward="true" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
+        <state relative-caret-position="578">
+          <caret line="34" column="24" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/2_SITEX/phase_03.05.lastTry/INC/layout.html.inc.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-34" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/2_SITEX/phase_03.05.lastTry/index.php">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/2_SITEX/phase_03.05.lastTry/INC/template.tpsem05.inc.php">
@@ -823,7 +829,7 @@
     <entry file="file://$PROJECT_DIR$/2_SITEX/phase_03.05.lastTry/INC/mesFonction.inc.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="340">
-          <caret line="203" lean-forward="true" selection-start-line="203" selection-end-line="203" />
+          <caret line="203" selection-start-line="203" selection-end-line="203" />
           <folding>
             <element signature="e#102#1261#0#PHP" />
             <element signature="n#scriptInfos#0;n#!!top" />
@@ -838,8 +844,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/2_SITEX/phase_03.05.lastTry/INC/request.inc.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="598">
-          <caret line="143" column="127" selection-start-line="143" selection-start-column="127" selection-end-line="143" selection-end-column="127" />
+        <state relative-caret-position="507">
+          <caret line="141" column="48" lean-forward="true" selection-start-line="141" selection-start-column="48" selection-end-line="141" selection-end-column="48" />
           <folding>
             <element signature="e#334#980#0#PHP" />
             <element signature="e#981#1674#0#PHP" />
@@ -851,7 +857,7 @@
             <element signature="e#2700#3252#0#PHP" />
             <element signature="e#3253#3682#0#PHP" />
             <element signature="e#3683#3840#0#PHP" />
-            <element signature="e#5137#5535#0#PHP" />
+            <element signature="e#5318#5716#0#PHP" />
           </folding>
         </state>
       </provider>

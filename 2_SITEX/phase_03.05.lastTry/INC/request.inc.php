@@ -141,7 +141,8 @@ function gereSubmit(){  // sem05_1.5.1
             toSend('#tp05result p', 'cacher');
             /*sendMakeTable(listeCours("1TL2"));
             print $_POST['formSelect']."lqlqlq";*/
-            sendMakeTable(listeCours($_POST['formSelect'])); // i did somthing in here but i dont know if is right to prof ????
+            $fromSelected = isset($_POST['formSelect']) ? $_POST['formSelect']:'';
+            sendMakeTable(listeCours($fromSelected)); // i did somthing in here but i dont know if is right to prof ????
             //sendMakeTable(RES_appelAjax('coursGroup'));
             break;
         default:
