@@ -139,7 +139,9 @@ function gereSubmit(){  // sem05_1.5.1
             require_once '/RES/appelAjax.php';
             toSend('#tp05result div', 'destination');
             toSend('#tp05result p', 'cacher');
-            sendMakeTable(listeCours("1TL2"));
+            /*sendMakeTable(listeCours("1TL2"));
+            print $_POST['formSelect']."lqlqlq";*/
+            sendMakeTable(listeCours($_POST['formSelect'])); // i did somthing in here but i dont know if is right to prof ????
             //sendMakeTable(RES_appelAjax('coursGroup'));
             break;
         default:
