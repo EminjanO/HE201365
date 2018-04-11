@@ -12,3 +12,4 @@ $_GET['groupe']= 5;
 kint::trace($_GET);
 include '../../2_SITEX/phase_03.05.lastTry/INC/request.inc.php';
 kint::trace(listeCours('1TL2'));
+//hi there !
