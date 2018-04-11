@@ -11,6 +11,7 @@ if (realpath(__FILE__) === realpath($_SERVER['SCRIPT_FILENAME'])) die('--access 
 require_once 'mesFonction.inc.php';
 require_once 'dbConnect.inc.php';
 
+global $toSend;
 function allGroup()
 {
     try
